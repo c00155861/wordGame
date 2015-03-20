@@ -1,0 +1,66 @@
+{% extends "base.html"%}
+
+{% block the_body %}
+<p>
+<font size = "6">
+You're placed at position {{position}}
+<br>
+<br>
+Top 10 Results
+</font>
+</p>
+<table style="border:3px solid black;border-collapse:collapse; " >
+<col width="100">
+<col width="150">
+<col width="250">
+
+<tr>
+
+<td style="border:3px solid black;font-size: 25" align="center">
+Position
+</td>
+
+<td style="border:3px solid black;font-size: 25" align="center">
+Time
+</td>
+
+<td style="border:3px solid black;font-size: 25" align="center">
+Name
+</td>
+</tr>
+
+{% for index in range(0, scores.__len__(), 1)%}
+<tr>
+<td style="border:3px solid black;font-size: 20" align="center">
+{{index + 1}}
+</td>
+
+<td style="border:3px solid black;font-size: 20" align="center">
+{{scores[index][0:scores[index].index(" ")]}}
+</td>
+
+<td style="border:3px solid black;font-size: 20" align="center">
+{{scores[index][scores[index].index(" ")+1:]}}
+</td>
+</tr>
+{%endfor%}
+</table>
+<br>
+<br>
+
+
+<form action ="{{new_game}}" >
+
+<p>	
+<input type="SUBMIT" value="Play Again?">
+</p>
+</form>
+
+<form action ="{{home}}" >
+
+<p>	
+<input type="SUBMIT" value="Home">
+</p>
+</form>
+
+{% endblock %}

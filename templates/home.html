@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+
+{% block the_body %}
+
+<p>
+<font size="6">
+To begin the game please select "Start Game" button.
+</font>
+</p>
+
+ <form action="{{web_game}}">
+    <input type="submit" value="Start Game">
+</form> 
+
+ <form action="{{score_board}}">
+    <input type="submit" value="Score Board">
+</form> 
+
+
+{% endblock %}

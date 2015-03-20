@@ -1,0 +1,94 @@
+{% extends "base.html"%}
+
+{% block the_body %}
+<p>
+<font size ="6">
+Your source word is {{source_word}}
+</font>
+</p>
+<br>
+<form action ="{{get_words}}" method = "POST">
+<table>
+<tr>
+<td>
+First guess:
+</td>
+<td>
+<input type="TEXT" name="guess1"required>
+</td>
+</tr>
+
+
+<tr>
+<td>
+Second guess:
+</td>
+
+<td>
+<input type="TEXT" name="guess2"required>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+Third guess:
+</td>
+
+<td>
+<input type="TEXT" name="guess3"required>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+Fourth guess:
+</td>
+<td>
+<input type="TEXT" name="guess4" required>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+Fifth guess:
+</td>
+
+<td>
+<input type="TEXT" name="guess5"required>
+</td>
+
+</tr>
+
+
+
+<tr>
+<td>
+Sixth guess:
+</td>
+
+<td>
+<input type="TEXT" name="guess6"required>
+</td>
+</tr>
+
+<tr>
+<td>
+Seventh guess:
+</td>
+
+<td>
+<input type="TEXT" name="guess7"required>
+</td>
+</tr>
+</table>
+<p>	
+<input type="SUBMIT" value="Submit Guesses">
+</p>
+</form>
+{% endblock %}

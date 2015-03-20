@@ -1,0 +1,42 @@
+{% extends "base.html"%}
+
+{% block the_body %}
+<p>
+<font size = "6">
+Unfortunately you lost the word game please try again.
+</font
+</p>
+
+
+{% for word in bad_words %}
+<p>
+<font size = "5">
+Bad Word: {{ word }}
+</font>
+</P>
+{%endfor%}
+
+
+{% for word in duplicate_words %}
+<p>
+<font size = "5">
+duplicate word: {{ word }}
+</font>
+</P>
+{%endfor%}
+
+<form action ="{{new_game}}">
+
+<p>	
+<input type="SUBMIT" value="Try Again?">
+</p>
+</form>
+
+<form action ="{{home}}" >
+
+<p>	
+<input type="SUBMIT" value="Home">
+</p>
+</form>
+
+{% endblock %}

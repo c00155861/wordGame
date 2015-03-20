@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+
+{% block the_body %}
+<p>
+<font size = "6">
+Congratulations you have won the game!!!
+</font>
+</p>
+<font size = "5">
+Your time is {{the_time}}
+</font>
+</p>
+<form action ="{{set_winners}}" method = "POST">
+<p>
+<font size = "5">
+Please enter in your name for the score board
+</font>
+</p>
+<br>
+Name: <input type="TEXT" name="name"required>
+
+
+
+
+<p>	
+<input type="SUBMIT"  value="Submit">
+</p>
+</form>
+
+{% endblock %}
